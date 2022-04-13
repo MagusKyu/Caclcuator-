@@ -174,7 +174,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		if (text->GetValue() == "0")
 		{
 			text->SetValue("7");
-		}
+		} 
 		else
 		{
 			text->AppendText("7");
