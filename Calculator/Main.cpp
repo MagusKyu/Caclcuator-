@@ -350,7 +350,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 			case 4:
 				answer = fmod(float(Operand1) , float(Operand2));
 				Res = wxString::Format(wxT("%f"), answer);
-				text->SetValue(Res);
+				text->SetValue(Res); 
 				break;
 			case 5: 
 				answer = float(Operand1) / float(Operand2);
