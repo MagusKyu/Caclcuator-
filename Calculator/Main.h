@@ -1,9 +1,19 @@
 #pragma once
 #include "wx/wx.h"
 
-class Main : public wxFrame
+class Main : public wxFrame 
 {
 private:
+
+	float Operand1 = 0;
+	float Operand2 = 0;
+	int Operators = 0;
+	wxString fast;
+	wxString last;
+	wxString Res;
+	wxString neg;
+	float post;
+	float answer;
 	wxButton* btnPlus = nullptr;
 	wxButton* btnSub = nullptr;
 	wxButton* btnMuilt = nullptr;
@@ -23,7 +33,8 @@ private:
 	wxButton* btnHex = nullptr;
 	wxButton* btnMod = nullptr;
 	wxButton* btnEqual = nullptr;
-	wxButton*  btnBack = nullptr;
+	wxButton*  btnDiv = nullptr;
+	wxButton* btnClear = nullptr;
 
 	wxTextCtrl* text = nullptr;
 public:
