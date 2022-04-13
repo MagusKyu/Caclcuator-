@@ -39,7 +39,7 @@ Main::Main() : wxFrame(nullptr, wxID_ANY, "Main", wxPoint(200, 200), wxSize(400,
 	btn5 = new wxButton(this, 800, "5", wxPoint(110, 165), wxSize(75, 40));			 //done
 	btn6 = new wxButton(this, 900, "6", wxPoint(190, 165), wxSize(75, 40));			 //done
 	btn1 = new wxButton(this, 1000, "1", wxPoint(30, 210), wxSize(75, 40));			 //done
-	btn2 = new wxButton(this, 1100, "2", wxPoint(110, 210), wxSize(75, 40));			 //done
+	btn2 = new wxButton(this, 1100, "2", wxPoint(110, 210), wxSize(75, 40));	 		 //done
 	btn3 = new wxButton(this, 1200, "3", wxPoint(190, 210), wxSize(75, 40));		 //done
 	btnNeg = new wxButton(this, 1300, "+/-", wxPoint(30, 255), wxSize(75, 40));      //done
 	btn0 = new wxButton(this, 1400, "0", wxPoint(110, 255), wxSize(75, 40));          //done
