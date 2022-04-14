@@ -273,7 +273,6 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 1300)	{
-
 	fast = text->GetValue();
 	
 	text->Clear();
