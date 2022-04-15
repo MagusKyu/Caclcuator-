@@ -141,7 +141,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		fast = text->GetValue();
 		Operand1 = wxAtof(fast);
 		Operators = 1;
-		text->SetValue("+");
+		text->AppendText("+");
 
 	}
 	else if (evt.GetId() == 200) {
@@ -171,7 +171,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 	}
 
 	else if (evt.GetId() == 400) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("7");
 		} 
@@ -181,7 +181,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 500) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("8");
 		}
@@ -192,7 +192,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 
 	}
 	else if (evt.GetId() == 600) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("9");
 		}
@@ -202,7 +202,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 700) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("4");
 		}
@@ -212,7 +212,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 800) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("5");
 		}
@@ -222,7 +222,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 1000) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("1");
 		}
@@ -233,7 +233,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 
 	}
 	else if (evt.GetId() == 1100) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+		if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("2");
 		}
@@ -243,7 +243,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 1200) {
-	if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+	if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast +  "%" || text->GetValue() == fast +  "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("3");
 		}
@@ -253,7 +253,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 1400) {
-		if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+	if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("0");
 		}
@@ -263,7 +263,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 		}
 	}
 	else if (evt.GetId() == 900) {
-	if (text->GetValue() == "+" || text->GetValue() == "-" || text->GetValue() == "%" || text->GetValue() == "*" || text->GetValue() == "/")
+	if (text->GetValue() == fast + "+" || text->GetValue() == fast + "-" || text->GetValue() == fast + "%" || text->GetValue() == fast + "*" || text->GetValue() == fast + "/")
 		{
 			text->SetValue("6");
 		}
@@ -278,7 +278,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 	text->Clear();
 	int NegCheck = wxAtoi(fast);
 	post = wxAtof(fast);
-	if (NegCheck > 0)
+	if (NegCheck > 0 )
 	{
 	text->SetValue("-");
 	text->AppendText(fast);
@@ -317,9 +317,7 @@ void Main::OnButtonClick(wxCommandEvent& evt)
 	ss << std::hex << (int)Operand1; 
 	std::string hexed(ss.str());
 	text->SetValue("0x");
-	answer = std::stof(hexed);
-	 Res = wxString::Format(wxT("%g"), answer); 
-	 text->AppendText(Res);
+	 text->AppendText(hexed);
 	
 }
 	else if (evt.GetId() == 1900) {
