@@ -57,28 +57,10 @@ Main::Main() : wxFrame(nullptr, wxID_ANY, "Main", wxPoint(200, 200), wxSize(400,
 	SetBackgroundColour(wxColour(204,237,244));
 		
 	wxFont font(24, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false);
-	
-	//wxFont btnfont(20, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false);
 	text = new wxTextCtrl(this, wxID_ANY, "", wxPoint(30, 10), wxSize(315, 55),wxTE_RIGHT);
 	text->SetBackgroundColour(wxColour(0, 0, 0));
 	text->SetForegroundColour(wxColour(255, 255, 255));
 	text->SetFont(font);
-
-	//btnClear->SetFont(btnfont);
-
-	
-	/*
-	
-	
-	
-	
-	
-	
-	btnClear->SetFont(btnfont);
-	btnPlus->SetFont(btnfont);
-	btnSub->SetFont(btnfont);
-	*/
-
 }
 
 void Main::OnButtonClick(wxCommandEvent& evt)
