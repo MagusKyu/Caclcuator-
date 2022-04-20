@@ -32,6 +32,7 @@ EVT_BUTTON(1901, OnButtonClick)
 wxEND_EVENT_TABLE()
 Main::Main() : wxFrame(nullptr, wxID_ANY, "Main", wxPoint(200, 200), wxSize(400, 400))
 {
+
 	Factory factory(this);
 	btnPlus = factory.MakeAddButton();
 	btnSub = factory.MakeSubtractButton();
@@ -56,10 +57,12 @@ Main::Main() : wxFrame(nullptr, wxID_ANY, "Main", wxPoint(200, 200), wxSize(400,
 	btn0 = factory.Make0Button();
 
 	SetBackgroundColour(wxColour(204, 237, 244));
+	processor = &CalculatorProcessor::GetInstance();
+	processor->CreateTextWindow(this);
+	
+}
 
-	wxFont font(24, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD, false);
-	text = new wxTextCtrl(this, wxID_ANY, "", wxPoint(30, 10), wxSize(315, 55), wxTE_RIGHT);
-	text->SetBackgroundColour(wxColour(0, 0, 0));
-	text->SetForegroundColour(wxColour(255, 255, 255));
-	text->SetFont(font);
+void Main::OnButtonClick(wxCommandEvent& ext)
+{
+	processor->ButtonClick(ext);
 }
