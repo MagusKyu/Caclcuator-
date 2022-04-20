@@ -15,7 +15,6 @@ private:
 	float post;
 	float answer;
 	wxButton* btnPlus = nullptr;
-
 	wxButton* btnSub = nullptr;
 	wxButton* btnMuilt = nullptr;
 	wxButton* btn9 = nullptr;
