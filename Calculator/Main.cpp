@@ -55,10 +55,6 @@ Main::Main() : wxFrame(nullptr, wxID_ANY, "Main", wxPoint(200, 200), wxSize(400,
 	btn2 = factory.Make2Button();
 	btn1 = factory.Make1Button();
 	btn0 = factory.Make0Button();
-
-	SetBackgroundColour(wxColour(204, 237, 244));
-	processor = &CalculatorProcessor::GetInstance();
-	processor->CreateTextWindow(this);
 	
 }
 
