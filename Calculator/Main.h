@@ -1,21 +1,15 @@
 #pragma once
 #include "wx/wx.h"
+#include "CalculatorProcessor.h"
 
 class Main : public wxFrame 
 {
+
 private:
 
-	float Operand1 = 0;
-	float Operand2 = 0;
-	int Operators = 0;
-	wxString fast;
-	wxString last;
-	wxString Res;
-	wxString neg;
-	float post;
-	float answer;
+	CalculatorProcessor* processor = nullptr;
+	
 	wxButton* btnPlus = nullptr;
-
 	wxButton* btnSub = nullptr;
 	wxButton* btnMuilt = nullptr;
 	wxButton* btn9 = nullptr;
@@ -41,7 +35,7 @@ private:
 public:
 	Main();
 	void OnButtonClick(wxCommandEvent& evt);
-	void OK(wxCommandEvent& evt);
+	
 
 	wxDECLARE_EVENT_TABLE();
 };
